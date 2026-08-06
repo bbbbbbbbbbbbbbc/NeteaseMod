@@ -1,0 +1,19 @@
+modLoader="javafml"
+loaderVersion="[10,)"
+license="LGPLv3"
+showAsResourcePack=false
+
+[[mods]]
+modId="neteasemod"
+version="1.0"
+displayName="NeteaseMod"
+authors="Bilibili @热爱BA的你-白子"
+description='''
+仿网易版模组，提供各项行为。
+“重新连接”，无主界面关闭进程。
+无“语言”，”遥测数据”。
+只有使用“--quickPlayMultiplayer”（自动进入服务器）才开始。
+
+'''
+[[mixins]]
+config = "META-INF/neteasemod.mixins.json"

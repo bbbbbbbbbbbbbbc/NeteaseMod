@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "org.neteasemod.mixin",
+  "mixins": [
+    "MainArgMixin"
+  ],
+  "client": ["DisconnectedScreenMixin"],
+  "compatibilityLevel": "JAVA_21",
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
