@@ -91,12 +91,9 @@ public class ClientEventHandler {
         if (newScreen instanceof JoinMultiplayerScreen) {
 
 
-                new Thread(() -> {
-                    try {
-                        Thread.sleep(80);
-                    } catch (Exception ignored) {}
-                    System.exit(0);
-                }).start();
+            Minecraft mc = Minecraft.getInstance();
+
+            mc.stop();
             }
 
     }
