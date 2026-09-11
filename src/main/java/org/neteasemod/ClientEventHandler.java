@@ -9,6 +9,9 @@ import net.minecraft.client.gui.screens.DisconnectedScreen;
 import net.minecraft.client.gui.screens.PauseScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.multiplayer.JoinMultiplayerScreen;
+import net.minecraft.client.gui.screens.worldselection.WorldCreationContextMapper;
+import net.minecraft.client.gui.screens.worldselection.SelectWorldScreen;
+import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.gui.components.MultiLineLabel;
 import net.minecraft.client.gui.screens.options.OptionsScreen;
 import net.minecraft.client.multiplayer.ServerData;
@@ -88,7 +91,7 @@ public class ClientEventHandler {
     public void onScreenOpen(ScreenEvent.Opening event) {
         if (!ControlledMode.ENABLED) return;
         Screen newScreen = event.getNewScreen();
-        if (newScreen instanceof JoinMultiplayerScreen) {
+        if (newScreen instanceof JoinMultiplayerScreen || newScreen instanceof TitleScreen) {
 
 
             Minecraft mc = Minecraft.getInstance();

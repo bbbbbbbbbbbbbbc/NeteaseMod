@@ -20,7 +20,10 @@ public class QuickPlayParseHelper {
                 splitHostPort(rawValue);
                 return;
             }
-
+            if (arg.startsWith("--quickPlaySingleplayer=")) {
+                SERVER_HOST = "Integrated";
+                return;
+            }
 
             if ("--quickPlayMultiplayer".equals(arg)) {
                 if (i + 1 < args.length) {
