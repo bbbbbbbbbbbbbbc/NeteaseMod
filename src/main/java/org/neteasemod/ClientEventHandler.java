@@ -107,7 +107,7 @@ public class ClientEventHandler {
         List<GuiEventListener> widgetList = new ArrayList<>(screen.children());
 
 
-        if (screen instanceof OptionsScreen) {
+        if (screen instanceof OptionsScreen || screen instanceof PauseScreen) {
             for (GuiEventListener guiEventListener : widgetList) {
                 if (guiEventListener instanceof Button btn) {
                     Component msg = btn.getMessage();
@@ -116,7 +116,13 @@ public class ClientEventHandler {
                         if (key.equals("options.language")
                                 || key.equals("options.telemetry")
                                 || key.equals("fml.menu.mods")
-                                || key.equals("neoforge.menu.mods.button")) {
+                                || key.equals("neoforge.menu.mods.button")
+                                || key.equals("menu.sendFeedback")
+                                || key.equals("menu.reportBugs")
+                                || key.equals("menu.shareToLan")
+                                || key.equals("menu.serverLinks")
+                                || key.equals("menu.playerReporting")
+                        ) {
                             btn.visible = false;
                             btn.active = false;
 
