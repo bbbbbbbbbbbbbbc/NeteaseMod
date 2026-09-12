@@ -4,7 +4,10 @@
   "mixins": [
     "MainArgMixin"
   ],
-  "client": ["DisconnectedScreenMixin"],
+  "client": [
+    "DisconnectedScreenMixin",
+    "MixinNeoForgeLoadingOverlay"
+  ],
   "compatibilityLevel": "JAVA_21",
   "injectors": {
     "defaultRequire": 1
